@@ -1,0 +1,4 @@
+{
+    "firmware.device": "STM32F072RB",
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/build_firmware/compile_commands.json"
+}
