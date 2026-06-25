@@ -30,10 +30,9 @@ set_target_properties(firmware PROPERTIES
 
 target_link_libraries(firmware PRIVATE
 
-    platform_stm32f072
-    drivers
-    core
     services
+    drivers
+    platform_stm32f072
 )
 
 # ------------------------------------------------------------------------------

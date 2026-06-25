@@ -20,8 +20,8 @@ file(GLOB CMSIS_SOURCES
 
 target_sources(platform_stm32f072 PRIVATE
 
-    ${CMAKE_CURRENT_SOURCE_DIR}/clock.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/interrupt.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/bsp/clock/clock.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/bsp/interrupt/interrupt.cpp
 
     ${CMAKE_CURRENT_SOURCE_DIR}/startup/startup_stm32f072xb.s
 
@@ -33,6 +33,9 @@ target_sources(platform_stm32f072 PRIVATE
 # ------------------------------------------------------------------------------
 
 target_include_directories(platform_stm32f072 PUBLIC
+
+    ${CMAKE_CURRENT_SOURCE_DIR}/bsp/clock
+    ${CMAKE_CURRENT_SOURCE_DIR}/bsp/interrupt
 
     ${CMAKE_CURRENT_SOURCE_DIR}/cmsis/core
     ${CMAKE_CURRENT_SOURCE_DIR}/cmsis/device/inc
